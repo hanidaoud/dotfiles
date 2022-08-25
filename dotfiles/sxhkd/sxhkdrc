@@ -142,7 +142,7 @@ shift + Print
 
 # launcher
 super + a
-	~/.config/rofi/launchers/type-7/launcher.sh 
+	~/.config/rofi/launcher/launcher.sh 
 
 # custom setup
 super + shift + period
