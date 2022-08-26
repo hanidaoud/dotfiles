@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
-DIR0=$( dirname -- "$0" )
+cd $( dirname -- "$0" )
+DIR0=`pwd`
 DIR1="$HOME"
 PROG="bspwm sxhkd polybar kitty picom rofi"
 PROG_NO_CONF="flameshot pulsemixer xorg-server xorg-xinit xorg-xbacklight xorg-xsetroot nitrogen sddm wget adwaita-icon-theme ntfs-3g unzip"
@@ -10,7 +11,7 @@ sudo pacman -S $PROG $PROG_NO_CONF --noconfirm --needed
 
 if [ -d "$DIR1/.config" ]
 then
-	mkdir $DIR1/.config_backups
+	mkdir -p $DIR1/.config_backups
 
 	for i in $PROG
 	do
