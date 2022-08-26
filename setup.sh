@@ -3,10 +3,10 @@
 DIR0=`pwd`
 DIR1="$HOME"
 PROG="bspwm sxhkd polybar kitty picom rofi"
-PROG_NO_CONF="flameshot pulsemixer xorg-xbacklight nitrogen xorg-server xorg-xinit sddm wget adwaita-icon-theme"
+PROG_NO_CONF="flameshot pulsemixer xorg-xbacklight nitrogen xorg-server xorg-xinit sddm wget adwaita-icon-theme ntfs-3g"
 
-sudo pacman -Syy
-sudo pacman -S $PROG $PROG_NO_CONF
+sudo pacman -Syy noto-fonts --noconfirm --needed --asdeps
+sudo pacman -S $PROG $PROG_NO_CONF --noconfirm --needed
 
 if [ -d "$DIR1/.config" ]
 then
@@ -73,4 +73,12 @@ echo -ne '
 [Icon Theme]
 Inherits=Adwaita' >> $DIR1/.icons/index.theme
 
-
+while true
+do
+	read -p "Do you want to reboot now [y/N]: " yn
+	case $yn in
+		[Yy]* ) reboot;;
+		[Nn]* ) break;;
+		* ) break;;
+	esac
+done
