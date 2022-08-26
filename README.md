@@ -15,7 +15,3 @@ Brightness Control|xbacklight|<span style="color:red">No</span>
 Lockscreen|
 File Manager|
 
-# Fonts
-
-- Font Awesome Pro/Brands
-- Hack NF
