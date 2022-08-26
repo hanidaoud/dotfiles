@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-DIR0=`pwd`
+DIR0=$( dirname -- "$0" )
 DIR1="$HOME"
 PROG="bspwm sxhkd polybar kitty picom rofi"
 PROG_NO_CONF="flameshot pulsemixer xorg-server xorg-xinit xorg-xbacklight xorg-xsetroot nitrogen sddm wget adwaita-icon-theme ntfs-3g unzip"
