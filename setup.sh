@@ -3,18 +3,23 @@
 DIR0=`pwd`
 DIR1="$HOME"
 PROG="bspwm sxhkd polybar kitty picom rofi"
-PROG_NO_CONF="flameshot pulsemixer xbacklight nitrogen xorg-server xorg-xinit sddm"
+PROG_NO_CONF="flameshot pulsemixer xorg-xbacklight nitrogen xorg-server xorg-xinit sddm"
 
 sudo pacman -Syy
 sudo pacman -S $PROG $PROG_NO_CONF
 
-mkdir $DIR1/.config_backups
+if [ -d "$DIR1/.config" ]
+then
+	mkdir $DIR1/.config_backups
 
-for i in $PROG
-do
-	cp -vr $DIR1/.config/$i $DIR1/.config_backups
-	rm -vrf $DIR1/.config/$i
-done
+	for i in $PROG
+	do
+		cp -vr $DIR1/.config/$i $DIR1/.config_backups
+		rm -vrf $DIR1/.config/$i
+	done
+else
+	mkdir $DIR1/.config
+fi
 
 cp -vr $DIR0/dotfiles/* $DIR1/.config/
 
