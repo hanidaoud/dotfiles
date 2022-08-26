@@ -2,6 +2,7 @@
 
 xrandr -s 1920x1080
 xsetroot -cursor_name left_ptr &
+xrdb -merge ~/.Xresources
 pgrep -x sxhkd > /dev/null || sxhkd &
 picom --experimental-backends &
 polybar wip &

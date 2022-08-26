@@ -73,6 +73,8 @@ echo -ne '
 [Icon Theme]
 Inherits=Adwaita' >> $DIR1/.icons/index.theme
 
+echo "Xcursor.theme: Adwaita" >> $DIR1/.Xresources
+
 while true
 do
 	read -p "Do you want to reboot now [y/N]: " yn
