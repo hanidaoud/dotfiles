@@ -18,6 +18,8 @@ done
 
 cp -vr $DIR0/dotfiles/* $DIR1/.config/
 
+sudo systemctl enable sddm
+
 echo -ne '
 # Aliases
 alias ls="ls --color=auto -alh"
