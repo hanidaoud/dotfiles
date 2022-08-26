@@ -1,6 +1,7 @@
 #! /bin/sh
 
-exec ~/.xinitrc &
+xrandr -s 1920x1080
+xsetroot -cursor_name left_ptr &
 pgrep -x sxhkd > /dev/null || sxhkd &
 picom --experimental-backends &
 polybar wip &
