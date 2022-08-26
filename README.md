@@ -1,4 +1,4 @@
-# Configs
+# Packages
 
 Function | Program |Config
 :-|:-|:-:
@@ -15,3 +15,8 @@ Brightness Control|xbacklight|<span style="color:red">No</span>
 Lockscreen|
 File Manager|
 
+# Fonts
+
+- [Hack Nerd Font](https://www.nerdfonts.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [Fontello](https://fontello.com)
