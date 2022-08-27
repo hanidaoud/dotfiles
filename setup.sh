@@ -90,7 +90,7 @@ Inherits=Adwaita' >> $DIR1/.icons/index.theme
 
 while true
 do
-	read -p " :: Do you want to reboot now [y/N] " yn
+	read -p ":: $(tput bold)Do you want to reboot now [y/N] $(tput sgr0)" yn
 	case $yn in
 		[Yy]* ) reboot;;
 		[Nn]* ) break;;
